@@ -23,6 +23,7 @@ if ( post_password_required() ) {
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'product-one', $product ); ?>>
 	<div class="product-one__wrapper">
 		<div class="product-one__inner">
+			
 			<div class="product-slide__big-item">
 			<?php
 			/**
@@ -65,8 +66,11 @@ if ( post_password_required() ) {
 	<div class="summary entry-summary product-one__info">
 		<div class="product-one__desc">
 				<div class="product-one__rating">
-					<div class="product-one__rating-title">Рейтинг: </div>
-					<img src="./images/catalog/product-rating.png" alt="img" class="product-one__rating-img">
+					<div class="product-one__rating-title">Рейтинг:</div>
+					<div class="product-one__rating-img">
+						<?php woocommerce_template_loop_rating();?>
+					</div>
+				
 				</div>
 				<button class="product-one__info-btn">забронировать</button>
 				<div class="product-one__rating-map">
@@ -75,23 +79,29 @@ if ( post_password_required() ) {
 
 				<div class="product-one__box">
 					<div class="product-one__info-name">Координаты:</div>
-					<div class="product-one__info-text">44.0486, 43.0594</div>
+					<div class="product-one__info-text">
+						<?php the_field('tovar_informacziya_koordinaty');?>
+					</div>
 				</div>
 				<div class="product-one__box">
 					<div class="product-one__info-name">Местоположение:</div>
-					<div class="product-one__info-text">город Пятигорск, </div>
-					<div class="product-one__info-text">ул. Островского, 115 </div>
+					<div class="product-one__info-text">
+					<?php the_field('tovar_informacziya_mestopolozhenie_gorod');?>
+					</div>
+					<div class="product-one__info-text">
+					<?php the_field('tovar_informacziya_mestopolozhenie_adres');?>
+					</div>
 				</div>
 				<div class="product-one__box">
 					<div class="product-one__info-name">Телефон:</div>
 					<a href="tel:88001234567" class="product-one__info-phone">
-						8 800 123 45 67
+					<?php the_field('tovar_informacziya_telefon');?>
 					</a>
 				</div>
 				<div class="product-one__box">
 					<div class="product-one__info-name">E-mail:</div>
 					<a href="mailto:info@web-systemz.ru" class="product-one__info-email">
-						info@web-systemz.ru
+					<?php the_field('tovar_informacziya_email');?>
 					</a>
 				</div>
 
@@ -102,11 +112,9 @@ if ( post_password_required() ) {
 							Не знаете, как выбрать? 
 							Оставьте заявку, мы сделаем подборку предложений, с учетом всех Ваших пожеланий
 						</div>
-						<form class="offers-block__form">
-							<input type="text" class="offers-block__form-input" placeholder="Ваше имя *">
-							<input type="text" class="offers-block__form-input" placeholder="Ваш телефон *">
-							<button class="offers-block__form-btn btn--orange">подобрать</button>
-						</form>
+						<div class="offers-block__form">
+							<?php echo do_shortcode('[contact-form-7 id="379292c" title="Нужна помощь"]')?>
+						</div>
 						<img src="<?php echo get_template_directory_uri()?>/assets/images/home/home-man.png" alt="img" class="offers-block__right-img">
 					</div>
 					

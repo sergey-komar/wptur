@@ -9,58 +9,38 @@
               <div class="footer-block__item-title">
                 направления
               </div>
-              <ul class="footer-block__list">
-                <li>
-                  <a href="#">Кисловодск</a>
-                </li>
-                <li>
-                  <a href="#">Пятигорск </a>
-                </li>
-                <li>
-                  <a href="#">Ессентуки </a>
-                </li>
-                <li>
-                  <a href="#">Железноводск</a>
-                </li>
-              </ul>
+              <?php
+                wp_nav_menu([
+                  'theme_location' => 'menu-footer',
+                  'menu_class' => 'footer-block__list',
+                  'container' => ''
+                ]);
+              ?>
+             
             </div>
             <div class="footer-block__item">
               <div class="footer-block__item-title">
                 о компании
               </div>
-              <ul class="footer-block__list">
-                <li>
-                  <a href="#">О нас</a>
-                </li>
-                <li>
-                  <a href="#">Бронирование</a>
-                </li>
-                <li>
-                  <a href="#">Оплата</a>
-                </li>
-                <li>
-                  <a href="#">Гарантии </a>
-                </li>
-              </ul>
+              <?php
+                wp_nav_menu([
+                  'theme_location' => 'menu-footer-1',
+                  'menu_class' => 'footer-block__list',
+                  'container' => ''
+                ]);
+              ?>
             </div>
             <div class="footer-block__item">
               <div class="footer-block__item-title">
                 информация
               </div>
-              <ul class="footer-block__list">
-                <li>
-                  <a href="#">Отзывы </a>
-                </li>
-                <li>
-                  <a href="#">Акции </a>
-                </li>
-                <li>
-                  <a href="#">Вопрос-ответ</a>
-                </li>
-                <li>
-                  <a href="#">Контакты</a>
-                </li>
-              </ul>
+              <?php
+                wp_nav_menu([
+                  'theme_location' => 'menu-footer-2',
+                  'menu_class' => 'footer-block__list',
+                  'container' => ''
+                ]);
+              ?>
             </div>
   
             <div class="header-top__social">

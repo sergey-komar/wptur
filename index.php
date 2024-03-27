@@ -39,10 +39,9 @@
  
       <div class="search">
         <div class="container">
-          <form class="home-search">
-            <input type="text" class="home-search__imput" placeholder="Поиск по санатариям и отелям">
-            <button class="home-search__btn btn--orange">найти</button>
-          </form>
+          <div class="home-search">
+              <?php echo do_shortcode('[aws_search_form]');?>
+          </div>
         </div>
       </div>
 
@@ -118,11 +117,9 @@
                   Не знаете, как выбрать? 
                   Оставьте заявку, мы сделаем подборку предложений, с учетом всех Ваших пожеланий
                 </div>
-                <form class="offers-block__form">
-                  <input type="text" class="offers-block__form-input" placeholder="Ваше имя *">
-                  <input type="text" class="offers-block__form-input" placeholder="Ваш телефон *">
-                  <button class="offers-block__form-btn btn--orange">подобрать</button>
-                </form>
+                <div class="offers-block__form">
+							  <?php echo do_shortcode('[contact-form-7 id="379292c" title="Нужна помощь"]')?>
+						    </div>
                 <img src="<?php echo get_template_directory_uri()?>/assets/images/home/home-man.png" alt="img" class="offers-block__right-img">
                 <div class="offers-block__right-img">
               </div>
@@ -139,33 +136,23 @@
           <h3 class="reviews__title title">Отзывы</h3>
           <div class="reviews__subtitle subtitle">Что говорят наши гости?</div>
           <div class="reviews-block">
+            <?php if(have_rows('glavnaya_otzyvy_element')) : while(have_rows('glavnaya_otzyvy_element')) : the_row();?>
             <div class="reviews-block__item">
-              <div class="reviews-block__item-title">Отель «Оранжевое солнце»</div>
-              <img src="./images/home/reviews-img.png" alt="img" class="reviews-block__item-img">
-              <div class="reviews-block__item-text">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. 
+              <div class="reviews-block__item-title">
+              <?php the_sub_field('glavnaya_otzyvy_element_zagolovok');?>
               </div>
-              <div class="reviews-block__item-name">Виктор, г. Туапсе</div>
-            </div>
-            <div class="reviews-block__item">
-              <div class="reviews-block__item-title">Отель «Оранжевое солнце»</div>
-              <img src="./images/home/reviews-img.png" alt="img" class="reviews-block__item-img">
+              <img src="<?php the_sub_field('glavnaya_otzyvy_element_rejting');?>" alt="img" class="reviews-block__item-img">
               <div class="reviews-block__item-text">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. 
+              <?php the_sub_field('glavnaya_otzyvy_element_tekst');?>
               </div>
-              <div class="reviews-block__item-name">Виктор, г. Туапсе</div>
-            </div>
-            <div class="reviews-block__item">
-              <div class="reviews-block__item-title">Отель «Оранжевое солнце»</div>
-              <img src="./images/home/reviews-img.png" alt="img" class="reviews-block__item-img">
-              <div class="reviews-block__item-text">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. 
+              <div class="reviews-block__item-name">
+              <?php the_sub_field('glavnaya_otzyvy_element_gorod');?>
               </div>
-              <div class="reviews-block__item-name">Виктор, г. Туапсе</div>
             </div>
+            <?php endwhile; endif;?>
           </div>
 
-          <a href="#" class="reviews__btn btn--orange">Все отзывы</a>
+          <a href="http://tur/otzyvy/" class="reviews__btn btn--orange">Все отзывы</a>
         </div>
       </section>
 
@@ -190,62 +177,14 @@
                 Фильтры
               </div>
           </div>
-          <div class="recommend-block">
+          <div class="recommend-block recommend-block__home">
            
                 <?php echo do_shortcode( '[featured_products limit="6"]' ) ?>
            
           
             <div class="recommend-sidebar">
                 <div class="recommend-sidebar__inner">
-                  <div class="recommend-sidebar__box">
-                    <div class="recommend-sidebar__box-title">Город</div>
-                    <label class="recommend-sidebar__label">
-                      <input type="checkbox" class="recommend-sidebar__checkbox">
-                      <span class="recommend-sidebar__custom"></span>
-                      <div class="recommend-sidebar__text">Ессентуки</div>
-                    </label>
-                    <label class="recommend-sidebar__label">
-                      <input type="checkbox" class="recommend-sidebar__checkbox">
-                      <span class="recommend-sidebar__custom"></span>
-                      <div class="recommend-sidebar__text">Пятигорск</div>
-                    </label>
-                    <label class="recommend-sidebar__label">
-                      <input type="checkbox" class="recommend-sidebar__checkbox">
-                      <span class="recommend-sidebar__custom"></span>
-                      <div class="recommend-sidebar__text"> Кисловодск</div>
-                    </label>
-                    <label class="recommend-sidebar__label">
-                      <input type="checkbox" class="recommend-sidebar__checkbox">
-                      <span class="recommend-sidebar__custom"></span>
-                      <div class="recommend-sidebar__text">Железноводск</div>
-                    </label>
-                  </div>
-                  
-                 
-                  <div class="recommend-sidebar__box">
-                    <div class="recommend-sidebar__box-title">Тип питания</div>
-                    <label class="recommend-sidebar__label">
-                      <input type="checkbox" class="recommend-sidebar__checkbox">
-                      <span class="recommend-sidebar__custom"></span>
-                      <div class="recommend-sidebar__text">Шведский стол</div>
-                    </label>
-                    <label class="recommend-sidebar__label">
-                      <input type="checkbox" class="recommend-sidebar__checkbox">
-                      <span class="recommend-sidebar__custom"></span>
-                      <div class="recommend-sidebar__text">Меню-заказ</div>
-                    </label>
-                    <label class="recommend-sidebar__label">
-                      <input type="checkbox" class="recommend-sidebar__checkbox">
-                      <span class="recommend-sidebar__custom"></span>
-                      <div class="recommend-sidebar__text">Завтрак</div>
-                    </label>
-                    <label class="recommend-sidebar__label">
-                      <input type="checkbox" class="recommend-sidebar__checkbox">
-                      <span class="recommend-sidebar__custom"></span>
-                      <div class="recommend-sidebar__text">Меню-заказ</div>
-                    </label>
-                  </div>
-                  <a href="#" class="recommend-sidebar__btn btn--orange">подобрать</a>
+                <?php dynamic_sidebar( 'sidebar-1' )?>
                 </div> 
             </div>
           </div>
@@ -310,5 +249,5 @@
         </div>
       </div>
     </main>
-
+    
 <?php get_footer();?>

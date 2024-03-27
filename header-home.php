@@ -16,46 +16,13 @@
           <img src="<?php echo get_template_directory_uri()?>/assets/images/header/logo.svg" alt="img">
         </a>
         <nav class="menu">
-          <ul class="menu__list">
-            <li>
-              <a href="#">О нас </a>
-            </li>
-            <li>
-              <a href="#">Бронирование</a>
-                <ul class="sub-menu">
-                  <li>
-                    <a href="">кисловодск</a>
-                  </li>
-                  <li>
-                    <a href="">пятигорск</a>
-                  </li>
-                  <li>
-                    <a href="">железноводск</a>
-                  </li>
-                  <li>
-                    <a href="">ессентуки</a>
-                  </li>
-                </ul>
-            </li>
-            <li>
-              <a href="./catalog.html">Оплата</a>
-            </li>
-            <li>
-              <a href="./news-detail.html">Гарантии</a>
-            </li>
-            <li>
-              <a href="./news.html">Отзывы</a>
-            </li>
-            <li>
-              <a href="./product.html">Акции</a>
-            </li>
-            <li>
-              <a href="#">Вопрос-ответ  </a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
+            <?php
+              wp_nav_menu([
+                'theme_location' => 'menu-header',
+                'menu_class' => 'menu__list',
+                'container' => ''
+              ]);
+            ?>
         </nav>                                        
         <div class="header-top__social">
           <a href="#" class="header-top__social-link">
@@ -90,23 +57,7 @@
         <p class="header-center__text">отдых, который близок каждому  </p>
 
         <div class="header-form">
-          <div class="header-form__item header-form__item--location">
-            <select>
-              <option>Выберите направление</option>
-              <option>кисловодск</option>
-              <option>пятигорск</option>
-              <option>ессентуки</option>
-            </select>
-          </div>
-          <div class="header-form__item header-form__item--date">
-              <input type="text" onfocus="(this.type='date')" class="header-form__item-input" id="date" placeholder="Выберите дату">
-          </div>
-          <div class="header-form__item header-form__item--man">
-             <input type="text" class="header-form__item-input" placeholder="Укажите кол-во гостей">
-          </div>
-          <div class="header-form__item">
-            <button class="header-form__item-btn btn--orange">забронировать</button>
-          </div>
+          <?php echo do_shortcode('[contact-form-7 id="dcc48e2" title="Напарвление"]')?>
         </div>
       </div>
     </div>

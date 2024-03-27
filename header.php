@@ -18,46 +18,13 @@
           <img src="<?php echo get_template_directory_uri()?>/assets/images/header/logo.svg" alt="img">
         </a>
         <nav class="menu">
-          <ul class="menu__list">
-            <li>
-              <a href="#">О нас </a>
-            </li>
-            <li>
-              <a href="#">Бронирование</a>
-                <ul class="sub-menu">
-                  <li>
-                    <a href="">кисловодск</a>
-                  </li>
-                  <li>
-                    <a href="">пятигорск</a>
-                  </li>
-                  <li>
-                    <a href="">железноводск</a>
-                  </li>
-                  <li>
-                    <a href="">ессентуки</a>
-                  </li>
-                </ul>
-            </li>
-            <li>
-              <a href="#">Оплата</a>
-            </li>
-            <li>
-              <a href="#">Гарантии</a>
-            </li>
-            <li>
-              <a href="#">Отзывы</a>
-            </li>
-            <li>
-              <a href="#">Акции</a>
-            </li>
-            <li>
-              <a href="#">Вопрос-ответ  </a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
+          <?php
+              wp_nav_menu([
+                'theme_location' => 'menu-header',
+                'menu_class' => 'menu__list',
+                'container' => ''
+              ]);
+            ?>
         </nav>                                        
         <div class="header-top__social">
           <a href="#" class="header-top__social-link">

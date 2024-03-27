@@ -7,7 +7,7 @@ get_header( 'shop' );
 
 
 <?php
-
+  
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -18,7 +18,22 @@ get_header( 'shop' );
 do_action( 'woocommerce_before_main_content' );
 
 ?>
-<div class="recommend-block">
+  <div class="search__wrapper">
+    <div class="search__sort">
+    
+     
+        <?php woocommerce_catalog_ordering()?>
+     
+    </div>
+      <div class="search__wrapper-filter">
+        Фильтры
+      </div>
+  </div>
+ 
+  
+  
+ 
+<div class="recommend-block recommend-block__shop">
 	<div class="recommend-sidebar">
 		<div class="recommend-sidebar__inner">
 		<?php
@@ -125,11 +140,9 @@ do_action( 'woocommerce_after_main_content' );
                   Не знаете, как выбрать? 
                   Оставьте заявку, мы сделаем подборку предложений, с учетом всех Ваших пожеланий
                 </div>
-                <form class="offers-block__form">
-                  <input type="text" class="offers-block__form-input" placeholder="Ваше имя *">
-                  <input type="text" class="offers-block__form-input" placeholder="Ваш телефон *">
-                  <button class="offers-block__form-btn btn--orange">подобрать</button>
-                </form>
+                <div class="offers-block__form">
+							    <?php echo do_shortcode('[contact-form-7 id="379292c" title="Нужна помощь"]')?>
+						    </div>
                 <img src="<?php echo get_template_directory_uri()?>/assets/images/home/home-man.png" alt="img" class="offers-block__right-img">
                 <div class="offers-block__right-img">
               </div>

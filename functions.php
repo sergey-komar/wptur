@@ -23,6 +23,8 @@ function tur() {
     register_nav_menus([
         'menu-header' => 'меню в шапке',
         'menu-footer' => 'меню в подвале',
+        'menu-footer-1' => 'меню в подвале1',
+        'menu-footer-2' => 'меню в подвале2',
         
     ]);
 }

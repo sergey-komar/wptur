@@ -9,10 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <main class="main">
 		<div class="search search-catalog">
 			<div class="container">
-			<form class="home-search">
-				<input type="text" class="home-search__imput" placeholder="Поиск по санатариям и отелям">
-				<button class="home-search__btn btn--orange">найти</button>
-			</form>
+				<div class="home-search">
+					<?php echo do_shortcode('[aws_search_form]');?>
+				</div>
 			</div>
       	</div>
 	<div class="container">

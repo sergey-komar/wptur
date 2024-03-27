@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="header header-catalog">
+    <div class="container-header">
+      <div class="header-top">
+        <a href="/" class="logo">
+          <img src="./images/header/logo.svg" alt="img">
+        </a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li>
+              <a href="#">О нас </a>
+            </li>
+            <li>
+              <a href="#">Бронирование</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="">кисловодск</a>
+                  </li>
+                  <li>
+                    <a href="">пятигорск</a>
+                  </li>
+                  <li>
+                    <a href="">железноводск</a>
+                  </li>
+                  <li>
+                    <a href="">ессентуки</a>
+                  </li>
+                </ul>
+            </li>
+            <li>
+              <a href="#">Оплата</a>
+            </li>
+            <li>
+              <a href="#">Гарантии</a>
+            </li>
+            <li>
+              <a href="#">Отзывы</a>
+            </li>
+            <li>
+              <a href="#">Акции</a>
+            </li>
+            <li>
+              <a href="#">Вопрос-ответ  </a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>                                        
+        <div class="header-top__social">
+          <a href="#" class="header-top__social-link">
+            <img src="./images/header/header-tg.svg" alt="img">
+          </a>
+          <a href="#" class="header-top__social-link">
+            <img src="./images/header/header-inst.svg" alt="img">
+          </a>
+        </div>
+  
+        <div class="header-top__date">c 09:00 до 21:00<br> 
+          в будни</div>
+  
+        <div class="header-top__contact">
+          <a href="tel:" class="header-top__contact-phone">+7 789 765 43 21</a>
+          <a href="tel:+71234567899" class="header-top__contact-phone header-top__contact-phone-desctop">+7 123 456 78 99</a>
+          <button class="header-top__contact-btn btn--green">забронировать</button>
+        </div>
+        <div class="nav-icon">
+          <div class="nav-icon__middle"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="header-center">
+    
+        <div class="header-form">
+          <div class="header-form__item header-form__item--location">
+            <select>
+              <option>Выберите направление</option>
+              <option>кисловодск</option>
+              <option>пятигорск</option>
+              <option>ессентуки</option>
+            </select>
+          </div>
+          <div class="header-form__item header-form__item--date">
+            <input type="text" onfocus="(this.type='date')" class="header-form__item-input" id="date" placeholder="Выберите дату">
+          </div>
+          <div class="header-form__item header-form__item--man">
+            <input type="text" class="header-form__item-input" placeholder="Укажите кол-во гостей">
+         </div>
+          <div class="header-form__item">
+            <button class="header-form__item-btn btn--orange">забронировать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </header>
+  
+    <main class="main">
+     
+      <div class="search search-catalog">
+        <div class="container">
+          <form class="home-search">
+            <input type="text" class="home-search__imput" placeholder="Поиск по санатариям и отелям">
+            <button class="home-search__btn btn--orange">найти</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs__list">
+                <li>
+                    <a  href="#">Главная</a>
+                </li>
+                <li>
+                    <a href="#">Новости</a>
+                </li>
+                <li>
+                    <a class="breadcrumbs__list-active" href="#">
+                        Эксперты выяснили, какие фильмы россияне смотрят в дороге и на отдыхе
+                    </a>
+                </li>
+            </ul> 
+        </div>
+      </div>
+
+      <section class="post">
+        <div class="container">
+            <div class="post-block">
+                <div class="post-block__left">
+                    <div class="post-block__inner">
+                        <div class="post-block__left-title">Рубрики</div>
+                        <div class="post-block__wrapper--right">
+                          <a href="#" class="post-block__left-link">Здоровье</a>
+                          <a href="#" class="post-block__left-link">Спорт</a>
+                          <a href="#" class="post-block__left-link">Активный отдых</a>
+                          <a href="#" class="post-block__left-link">Отдых с детьми</a>
+                          <a href="#" class="post-block__left-link">Транспорт</a>
+                          <a href="#" class="post-block__left-link">Зимний отдых</a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="post-block__right">
+                    <div class="post-block__wrapper">
+                        <h1 class="post-block__right-title">
+                            Эксперты выяснили, какие фильмы россияне смотрят в дороге и на отдыхе
+                        </h1>
+                        <div class="post-block__right-date">
+                            12.04.2023 г. опубликовано в рубрике “Транспорт”
+                        </div>
+                        <img src="./images/post.png" alt="img" class="post-block__right-img">
+                        <p class="post-block__right-text">
+                            Больше половины россиян смотрят фильмы и сериалы в поездках, чтобы скоротать время в дороге, чаще всего выбирают комедии, триллеры и драмы, говорится в исследовании сервиса по покупке билетов "Авиасейлс" и онлайн-кинотеатра Start, которое имеется в распоряжении РИА Новости.
+                        </p>
+                        <p class="post-block__right-text">
+                            В опросе приняли участие свыше 1,5 тысячи подписчиков стриминга и пользователей "Авиасейлс". "Больше половины из них ответили, что смотрят фильмы и сериалы в поездках – 56 процентов", – рассказали аналитики.
+                        </p>
+                        <p class="post-block__right-text">
+                           Они также выяснили, что россияне обращаются к просмотру киноконтента в разные моменты путешествия. "Чаще всего это способ скоротать время в дороге. В вопросе с множественным выбором, большинство из них отметили, что смотрят кино в самолете – 78 процентов. В аэропорту для этого находят время 30 процентов респондентов, а четверть – по дороге в хаб", – говорится в исследовании.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <div class="sity-category">
+        <div class="container">
+          <div class="sity-category__box">
+            <a href="#" class="sity-category__link"> Отдых в Кисловодске</a>
+            <a href="#" class="sity-category__link"> Отдых в Пятигорске </a>
+            <a href="#" class="sity-category__link"> Отдых в Ессентуках </a>
+            <a href="#" class="sity-category__link"> Отдых в Железноводске</a>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-block">
+          <a href="/" class="footer-block__logo">
+            <img src="./images/header/logo.svg" alt="img">
+          </a>
+          <div class="footer-block__item">
+            <div class="footer-block__item-title">
+              направления
+            </div>
+            <ul class="footer-block__list">
+              <li>
+                <a href="#">Кисловодск</a>
+              </li>
+              <li>
+                <a href="#">Пятигорск </a>
+              </li>
+              <li>
+                <a href="#">Ессентуки </a>
+              </li>
+              <li>
+                <a href="#">Железноводск</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block__item">
+            <div class="footer-block__item-title">
+              о компании
+            </div>
+            <ul class="footer-block__list">
+              <li>
+                <a href="#">О нас</a>
+              </li>
+              <li>
+                <a href="#">Бронирование</a>
+              </li>
+              <li>
+                <a href="#">Оплата</a>
+              </li>
+              <li>
+                <a href="#">Гарантии </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block__item">
+            <div class="footer-block__item-title">
+              информация
+            </div>
+            <ul class="footer-block__list">
+              <li>
+                <a href="#">Отзывы </a>
+              </li>
+              <li>
+                <a href="#">Акции </a>
+              </li>
+              <li>
+                <a href="#">Вопрос-ответ</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="header-top__social">
+            <a href="#" class="header-top__social-link">
+              <img src="./images/header/header-tg.svg" alt="img">
+            </a>
+            <a href="#" class="header-top__social-link">
+              <img src="./images/header/header-inst.svg" alt="img">
+            </a>
+          </div>
+    
+          <div class="header-top__date">c 09:00 до 21:00<br> 
+            в будни</div>
+    
+          <div class="header-top__contact">
+            <a href="tel:" class="header-top__contact-phone">+7 789 765 43 21</a>
+            <a href="tel:+71234567899" class="header-top__contact-phone">+7 123 456 78 99</a>
+            <button class="header-top__contact-btn btn--green">забронировать</button>
+          </div>
+         
+        </div>
+
+        <div class="footer-bottom">
+          
+          <a href="#" class="footer-bottom__link">
+            Политика конфиденциальности в отношении 
+          </a>
+          <a href="#" class="footer-bottom__link">Разработка сайта - crash-design.ru</a>
+        </div>
+      </div>
+    </footer>
+  
+  <div class="btnUp">&uarr;</div>
+  <div class="btnUp btnUp--desctop">
+    <img src="./images/btn-arrows.png" alt="img">
+  </div> 
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

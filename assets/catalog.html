@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="header header-catalog">
+    <div class="container-header">
+      <div class="header-top">
+        <a href="/" class="logo">
+          <img src="./images/header/logo.svg" alt="img">
+        </a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li>
+              <a href="#">О нас </a>
+            </li>
+            <li>
+              <a href="#">Бронирование</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="">кисловодск</a>
+                  </li>
+                  <li>
+                    <a href="">пятигорск</a>
+                  </li>
+                  <li>
+                    <a href="">железноводск</a>
+                  </li>
+                  <li>
+                    <a href="">ессентуки</a>
+                  </li>
+                </ul>
+            </li>
+            <li>
+              <a href="#">Оплата</a>
+            </li>
+            <li>
+              <a href="#">Гарантии</a>
+            </li>
+            <li>
+              <a href="#">Отзывы</a>
+            </li>
+            <li>
+              <a href="#">Акции</a>
+            </li>
+            <li>
+              <a href="#">Вопрос-ответ  </a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>                                        
+        <div class="header-top__social">
+          <a href="#" class="header-top__social-link">
+            <img src="./images/header/header-tg.svg" alt="img">
+          </a>
+          <a href="#" class="header-top__social-link">
+            <img src="./images/header/header-inst.svg" alt="img">
+          </a>
+        </div>
+  
+        <div class="header-top__date">c 09:00 до 21:00<br> 
+          в будни</div>
+  
+        <div class="header-top__contact">
+          <a href="tel:" class="header-top__contact-phone">+7 789 765 43 21</a>
+          <a href="tel:+71234567899" class="header-top__contact-phone header-top__contact-phone-desctop">+7 123 456 78 99</a>
+          <button class="header-top__contact-btn btn--green">забронировать</button>
+        </div>
+        <div class="nav-icon">
+          <div class="nav-icon__middle"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="header-center">
+    
+        <div class="header-form">
+          <div class="header-form__item header-form__item--location">
+            <select>
+              <option>Выберите направление</option>
+              <option>кисловодск</option>
+              <option>пятигорск</option>
+              <option>ессентуки</option>
+            </select>
+          </div>
+          <div class="header-form__item header-form__item--date">
+            <input type="text" onfocus="(this.type='date')" class="header-form__item-input" id="date" placeholder="Выберите дату">
+          </div>
+          <div class="header-form__item header-form__item--man">
+            <input type="text" class="header-form__item-input" placeholder="Укажите кол-во гостей">
+         </div>
+          <div class="header-form__item">
+            <button class="header-form__item-btn btn--orange">забронировать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </header>
+  
+    <main class="main">
+     
+      <div class="search search-catalog">
+        <div class="container">
+          <form class="home-search">
+            <input type="text" class="home-search__imput" placeholder="Поиск по санатариям и отелям">
+            <button class="home-search__btn btn--orange">найти</button>
+          </form>
+        </div>
+      </div>
+ 
+      <section class="recommend recommend-catalog">
+        <div class="container">
+          <div class="search__wrapper">
+            <div class="search__sort">
+              <button class="search__sort-btn">Сортировать по</button>
+              <ul class="search__list">
+                  <li><a class="search__list-link--active" href="#">По умолчанию</a></li>
+                  <li><a href="#">Сначала новые</a></li>
+                  <li><a href="#">Цена по убыванию</a></li>
+                  <li><a href="#">Цена по возрастанию</a></li>
+              </ul>
+            </div>
+              <div class="search__wrapper-filter">
+                Фильтры
+              </div>
+          </div>
+          <div class="recommend-block">
+            <div class="recommend-sidebar">
+                <div class="recommend-sidebar__inner">
+                  <div class="recommend-sidebar__box">
+                    <div class="recommend-sidebar__box-title">Город</div>
+                    <label class="recommend-sidebar__label">
+                      <input type="checkbox" class="recommend-sidebar__checkbox">
+                      <span class="recommend-sidebar__custom"></span>
+                      <div class="recommend-sidebar__text">Ессентуки</div>
+                    </label>
+                    <label class="recommend-sidebar__label">
+                      <input type="checkbox" class="recommend-sidebar__checkbox">
+                      <span class="recommend-sidebar__custom"></span>
+                      <div class="recommend-sidebar__text">Пятигорск</div>
+                    </label>
+                    <label class="recommend-sidebar__label">
+                      <input type="checkbox" class="recommend-sidebar__checkbox">
+                      <span class="recommend-sidebar__custom"></span>
+                      <div class="recommend-sidebar__text"> Кисловодск</div>
+                    </label>
+                    <label class="recommend-sidebar__label">
+                      <input type="checkbox" class="recommend-sidebar__checkbox">
+                      <span class="recommend-sidebar__custom"></span>
+                      <div class="recommend-sidebar__text">Железноводск</div>
+                    </label>
+                  </div>
+                  <div class="recommend-sidebar__box">
+                    <div class="recommend-sidebar__box-title">Тип питания</div>
+                    <label class="recommend-sidebar__label">
+                      <input type="checkbox" class="recommend-sidebar__checkbox">
+                      <span class="recommend-sidebar__custom"></span>
+                      <div class="recommend-sidebar__text">Ессентуки</div>
+                    </label>
+                    <label class="recommend-sidebar__label">
+                      <input type="checkbox" class="recommend-sidebar__checkbox">
+                      <span class="recommend-sidebar__custom"></span>
+                      <div class="recommend-sidebar__text">Пятигорск</div>
+                    </label>
+                    <label class="recommend-sidebar__label">
+                      <input type="checkbox" class="recommend-sidebar__checkbox">
+                      <span class="recommend-sidebar__custom"></span>
+                      <div class="recommend-sidebar__text"> Кисловодск</div>
+                    </label>
+                    <label class="recommend-sidebar__label">
+                      <input type="checkbox" class="recommend-sidebar__checkbox">
+                      <span class="recommend-sidebar__custom"></span>
+                      <div class="recommend-sidebar__text">Железноводск</div>
+                    </label>
+                  </div>
+                  <a href="#" class="recommend-sidebar__btn btn--orange">подобрать</a>
+                </div> 
+            </div>
+
+            <div class="recommend-block__left">
+                <h3 class="recommend-catalog__title">
+                    Отдых в Пятигорске
+                </h3>
+              <div class="recommend-block__item">
+                <img src="./images/home/hotel-1.png" alt="img" class="recommend-block__item-img">
+                <div class="recommend-block__content">
+                  <div class="recommend-block__content-title">отель «солнечный»</div>
+                  <div class="recommend-block__content__subtitle">г. Пятигорск, ул. Горького, 115</div>
+                  <div class="recommend-block__content-text">
+                    Профили лечения:
+                    Сердечно-сосудистая система, Желудочно-кишечный тракт (ЖКТ), Обмен веществ,
+                    Гинекология, Кровообращение, Заболевания печени, Детокс, Похудение
+                  </div>
+                  <div class="recommend-block__center">
+                    <div class="recommend-block__icon">
+                      <img src="./images/home/wifi 1.svg" alt="img" class="recommend-block__icon-img">
+                      <div class="recommend-block__icon-title">Wi-Fi</div>
+                    </div>
+                    <div class="recommend-block__icon">
+                      <img src="./images/home/food 1.svg" alt="img" class="recommend-block__icon-img">
+                      <div class="recommend-block__icon-title">Шведская линия</div>
+                    </div>
+                    <div class="recommend-block__icon">
+                      <img src="./images/home/tree 1.svg" alt="img" class="recommend-block__icon-img">
+                      <div class="recommend-block__icon-title">Куроротная зона</div>
+                    </div>
+                  </div>
+
+                  <div class="recommend-block__bottom">
+                    <div class="recommend-block__bottom-price">
+                      от 9500 руб./сутки
+                      <span></span>
+                    </div>
+                    <a href="#" class="recommend-block__bottom-btn">подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="recommend-block__item">
+                <img src="./images/home/hotel-2.png" alt="img" class="recommend-block__item-img">
+                <div class="recommend-block__content">
+                  <div class="recommend-block__content-title">отель «солнечный»</div>
+                  <div class="recommend-block__content__subtitle">г. Пятигорск, ул. Горького, 115</div>
+                  <div class="recommend-block__content-text">
+                    Профили лечения:
+                    Сердечно-сосудистая система, Желудочно-кишечный тракт (ЖКТ), Обмен веществ,
+                    Гинекология, Кровообращение, Заболевания печени, Детокс, Похудение
+                  </div>
+                  <div class="recommend-block__center">
+                    <div class="recommend-block__icon">
+                      <img src="./images/home/wifi 1.svg" alt="img" class="recommend-block__icon-img">
+                      <div class="recommend-block__icon-title">Wi-Fi</div>
+                    </div>
+                    <div class="recommend-block__icon">
+                      <img src="./images/home/food 1.svg" alt="img" class="recommend-block__icon-img">
+                      <div class="recommend-block__icon-title">Шведская линия</div>
+                    </div>
+                    <div class="recommend-block__icon">
+                      <img src="./images/home/tree 1.svg" alt="img" class="recommend-block__icon-img">
+                      <div class="recommend-block__icon-title">Куроротная зона</div>
+                    </div>
+                  </div>
+
+                  <div class="recommend-block__bottom">
+                    <div class="recommend-block__bottom-price">
+                      от 9500 руб./сутки
+                      <span></span>
+                    </div>
+                    <a href="#" class="recommend-block__bottom-btn">подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="recommend-block__item">
+                <img src="./images/home/hotel-3.png" alt="img" class="recommend-block__item-img">
+                <div class="recommend-block__content">
+                  <div class="recommend-block__content-title">отель «солнечный»</div>
+                  <div class="recommend-block__content__subtitle">г. Пятигорск, ул. Горького, 115</div>
+                  <div class="recommend-block__content-text">
+                    Профили лечения:
+                    Сердечно-сосудистая система, Желудочно-кишечный тракт (ЖКТ), Обмен веществ,
+                    Гинекология, Кровообращение, Заболевания печени, Детокс, Похудение
+                  </div>
+                  <div class="recommend-block__center">
+                    <div class="recommend-block__icon">
+                      <img src="./images/home/wifi 1.svg" alt="img" class="recommend-block__icon-img">
+                      <div class="recommend-block__icon-title">Wi-Fi</div>
+                    </div>
+                    <div class="recommend-block__icon">
+                      <img src="./images/home/food 1.svg" alt="img" class="recommend-block__icon-img">
+                      <div class="recommend-block__icon-title">Шведская линия</div>
+                    </div>
+                    <div class="recommend-block__icon">
+                      <img src="./images/home/tree 1.svg" alt="img" class="recommend-block__icon-img">
+                      <div class="recommend-block__icon-title">Куроротная зона</div>
+                    </div>
+                  </div>
+
+                  <div class="recommend-block__bottom">
+                    <div class="recommend-block__bottom-price">
+                      от 9500 руб./сутки
+                      <span></span>
+                    </div>
+                    <a href="#" class="recommend-block__bottom-btn">подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      </section>
+
+
+      <section class="offers">
+        <div class="container">
+          <h3 class="offers__title title">
+            ТОП предложений
+          </h3>
+          <div class="offers__subtitle subtitle">
+            Что выбирают наши гости в этом сезоне
+          </div>
+          <div class="offers-block">
+            <div class="offers-block__left--wrapper">
+              <div class="offers-block__left">
+                <div class="offers-block__item" style="background-image: url('./images/home/hotel-1.png');">
+                  <div class="offers-block__item-text">лидер сезона!</div>
+                  <div class="offers-block__item-title">отель «солнечный»</div>
+                </div>
+                <div class="offers-block__item" style="background-image: url('./images/home/hotel-2.png');">
+                  <div class="offers-block__item-text">цена снижена!</div>
+                  <div class="offers-block__item-title">база отдыха «база»</div>
+                </div>
+                <div class="offers-block__item" style="background-image: url('./images/home/hotel-3.png');">
+                  <div class="offers-block__item-text">лидер сезона!</div>
+                  <div class="offers-block__item-title">санаторий «Resort»</div>
+                </div>
+                <div class="offers-block__item" style="background-image: url('./images/home/hotel-4.png');">
+                  <div class="offers-block__item-text">цена снижена!</div>
+                  <div class="offers-block__item-title">отель «родник»</div>
+                </div>
+                <div class="offers-block__item" style="background-image: url('./images/home/hotel-5.png');">
+                  <div class="offers-block__item-text">лидер сезона!</div>
+                  <div class="offers-block__item-title">санаторий «горный»</div>
+                </div>
+                <div class="offers-block__item" style="background-image: url('./images/home/hotel-6.png');">
+                  <div class="offers-block__item-text">цена снижена!</div>
+                  <div class="offers-block__item-title">база отдыха «SUNSET»</div>
+                </div>
+              </div>
+            </div>
+           
+            <div class="offers-block__right--wrapper">
+              <div class="offers-block__right">
+                <div class="offers-block__right-title">Нужна помощь?</div>
+                <div class="offers-block__right-text">
+                  Не знаете, как выбрать? 
+                  Оставьте заявку, мы сделаем подборку предложений, с учетом всех Ваших пожеланий
+                </div>
+                <form class="offers-block__form">
+                  <input type="text" class="offers-block__form-input" placeholder="Ваше имя *">
+                  <input type="text" class="offers-block__form-input" placeholder="Ваш телефон *">
+                  <button class="offers-block__form-btn btn--orange">подобрать</button>
+                </form>
+                <img src="./images/home/home-man.png" alt="img" class="offers-block__right-img">
+                <div class="offers-block__right-img">
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      
+      </section>
+
+      <div class="price">
+        <div class="container">
+            <h3 class="price__title title">Цены на отдых в Пятигорске</h3>
+            <div class="price__inner">
+                <div class="price__text">
+                    С другой стороны укрепление и развитие структуры способствует подготовки и реализации существенных финансовых и административных условий. Задача организации, в особенности же консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Таким образом постоянный количественный рост и сфера нашей активности требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Таким образом рамки и место обучения кадров в значительной степени обуславливает создание форм развития.
+                </div>
+                <div class="price__text">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции требуют определения и уточнения соответствующий условий активизации. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации модели развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа направлений прогрессивного развития. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации систем массового участия.
+                </div>
+            </div>
+            
+        </div>
+      </div>
+
+      <div class="sity-category">
+        <div class="container">
+          <div class="sity-category__box">
+            <a href="#" class="sity-category__link"> Отдых в Кисловодске</a>
+            <a href="#" class="sity-category__link"> Отдых в Пятигорске </a>
+            <a href="#" class="sity-category__link"> Отдых в Ессентуках </a>
+            <a href="#" class="sity-category__link"> Отдых в Железноводске</a>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-block">
+          <a href="/" class="footer-block__logo">
+            <img src="./images/header/logo.svg" alt="img">
+          </a>
+          <div class="footer-block__inner">
+            <div class="footer-block__item">
+              <div class="footer-block__item-title">
+                направления
+              </div>
+              <ul class="footer-block__list">
+                <li>
+                  <a href="#">Кисловодск</a>
+                </li>
+                <li>
+                  <a href="#">Пятигорск </a>
+                </li>
+                <li>
+                  <a href="#">Ессентуки </a>
+                </li>
+                <li>
+                  <a href="#">Железноводск</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-block__item">
+              <div class="footer-block__item-title">
+                о компании
+              </div>
+              <ul class="footer-block__list">
+                <li>
+                  <a href="#">О нас</a>
+                </li>
+                <li>
+                  <a href="#">Бронирование</a>
+                </li>
+                <li>
+                  <a href="#">Оплата</a>
+                </li>
+                <li>
+                  <a href="#">Гарантии </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-block__item">
+              <div class="footer-block__item-title">
+                информация
+              </div>
+              <ul class="footer-block__list">
+                <li>
+                  <a href="#">Отзывы </a>
+                </li>
+                <li>
+                  <a href="#">Акции </a>
+                </li>
+                <li>
+                  <a href="#">Вопрос-ответ</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="header-top__social">
+              <a href="#" class="header-top__social-link">
+                <img src="./images/header/header-tg.svg" alt="img">
+              </a>
+              <a href="#" class="header-top__social-link">
+                <img src="./images/header/header-inst.svg" alt="img">
+              </a>
+            </div>
+      
+            <div class="header-top__date">c 09:00 до 21:00<br> 
+              в будни</div>
+      
+            <div class="header-top__contact">
+              <a href="tel:" class="header-top__contact-phone">+7 789 765 43 21</a>
+              <a href="tel:+71234567899" class="header-top__contact-phone">+7 123 456 78 99</a>
+              <button class="header-top__contact-btn btn--green">забронировать</button>
+            </div>
+           
+          </div>
+         
+        </div>
+
+        <div class="footer-bottom">
+          
+          <a href="#" class="footer-bottom__link">
+            Политика конфиденциальности в отношении 
+          </a>
+          <a href="#" class="footer-bottom__link">Разработка сайта - crash-design.ru</a>
+        </div>
+      </div>
+    </footer>
+   
+   <div class="btnUp">&uarr;</div> 
+   <div class="btnUp btnUp--desctop">
+    <img src="./images/btn-arrows.png" alt="img">
+  </div> 
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+.woocommerce.columns-4 {
+    width: 75%;
+}
+
+.recommend-block__left {
+    width: 100%;
+}
+
+.recommend-block__item-img img {
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.recommend-block__content-title,
+.recommend-block__content__subtitle {
+    margin-bottom: 1rem;
+}
+
+.news-block__item-title,
+.news-block__item-date {
+    margin-bottom: 1.5rem;
+}
+
+.post-block__right p img {
+    margin-bottom: 3rem;
+}
+
+.page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #e0e0e0;
+}
+
+.pagination__list {
+    align-items: center;
+}
+
+.page-numbers.current {
+    color: #fff;
+    background: #4dacb8;
+
+}
+
+.next.page-numbers,
+.prev.page-numbers {
+    width: 0;
+    height: 0;
+}
+
+.next.page-numbers {
+    margin-left: 3rem;
+}
+
+.prev.page-numbers {
+    margin-right: 3rem;
+}
+
+.kb_title {
+    font-weight: 400;
+    color: #000;
+}
+
+.breadcrumbs-catalog {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+
+
+.breadcrumbs__list a {
+    color: #fa5b03;
+    font-weight: 400;
+}
+
+.breadcrumbs a {
+    color: #fa5b03;
+    font-weight: 400;
+}
+
+.woocommerce-ordering {
+    display: none;
+}
+
+.recommend-sidebar__box-link {
+    display: block;
+    position: relative;
+    z-index: 9;
+}
+
+.product-slide__big-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.flex-control-nav.flex-control-thumbs {
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    justify-content: center;
+}
+
+.flex-control-nav.flex-control-thumbs img {
+    height: 10rem;
+    object-fit: cover;
+}
+
+.flex-control-nav.flex-control-thumbs li {
+    width: 20%;
+    list-style-type: none;
+}
+
+.woocommerce-product-gallery__image img {
+    margin-bottom: 2rem;
+}
+
+.product-slide__big-item {
+    margin-bottom: 4rem;
+}
+
+.product-slide__big-item img {
+    width: 80%;
+}
+
+.active {
+    color: #000;
+    background: #fafafa;
+}
+.tabs__item-btn{
+    line-height: 6rem;
+}

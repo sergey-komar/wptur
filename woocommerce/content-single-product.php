@@ -72,11 +72,12 @@ if ( post_password_required() ) {
 					</div>
 				
 				</div>
-				<button class="product-one__info-btn">забронировать</button>
-				<div class="product-one__rating-map">
-					<img src="./images/catalog/map.png" alt="img">
-				</div>
+				<button class="product-one__info-btn btn-click">забронировать</button>
 
+				<div class="product-one__rating-map">
+					<?php echo $product->short_description;?>
+				</div>
+				
 				<div class="product-one__box">
 					<div class="product-one__info-name">Координаты:</div>
 					<div class="product-one__info-text">

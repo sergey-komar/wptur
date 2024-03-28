@@ -93,9 +93,20 @@
                 <?php
                 $product_home = new WP_Query([
                     'post_type' => 'product',
-                    'posts_per_page' => 6
+                    'posts_per_page' => 6,
+                    'meta_query' => [
+                      'relation' => 'OR',
+                      [
+                        'key' => 'tovar_na_glavnoj',
+                        'value' => 'да'
+                      ],
+                      
+                    ]
+                     
+                    
                 ])
                 ?>
+               
                 <?php if($product_home->have_posts()) : while($product_home->have_posts()) : $product_home->the_post();?>
                 <a href="<?php the_permalink();?>" class="offers-block__item" style="background-image: url('<?php the_post_thumbnail_url();?>');">
                   <div class="offers-block__item-text">
@@ -165,13 +176,7 @@
           </div>
           <div class="search__wrapper">
             <div class="search__sort">
-              <button class="search__sort-btn">Сортировать по</button>
-              <ul class="search__list">
-                  <li><a class="search__list-link--active" href="#">По умолчанию</a></li>
-                  <li><a href="#">Сначала новые</a></li>
-                  <li><a href="#">Цена по убыванию</a></li>
-                  <li><a href="#">Цена по возрастанию</a></li>
-              </ul>
+                <?php woocommerce_catalog_ordering()?>
             </div>
               <div class="search__wrapper-filter">
                 Фильтры
@@ -215,7 +220,7 @@
                 <?php echo get_the_date();?>
               </div>
               <div class="news-block__item-text">
-                <?php the_excerpt();?>
+              <?php echo kama_excerpt( [ 'maxchar'=>250 ] ); ?>
               </div>
               
             </a>

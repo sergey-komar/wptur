@@ -20,7 +20,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			<?php echo $product->name;?>
 		</div>
 		<div class="recommend-block__content__subtitle">
-		<?php echo $product->short_description;?>
+		<?php the_field('gorod_ulicza');?>
+
 		</div>
 		<div class="recommend-block__content-text">
 		<?php the_field('tovar_opisanie_tekst');?>

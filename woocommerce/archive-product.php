@@ -76,20 +76,7 @@ if ( woocommerce_product_loop() ) {
 
 	woocommerce_product_loop_end();
 
-	/**
-	 * Hook: woocommerce_after_shop_loop.
-	 *
-	 * @hooked woocommerce_pagination - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop' );
-} else {
-	/**
-	 * Hook: woocommerce_no_products_found.
-	 *
-	 * @hooked wc_no_products_found - 10
-	 */
-	do_action( 'woocommerce_no_products_found' );
-}
+	
 
 /**
  * Hook: woocommerce_after_main_content.
@@ -101,57 +88,91 @@ do_action( 'woocommerce_after_main_content' );
 
 ?>
 </div>
+<div class="pagination-shop">
+  <div class="container">
+    <div class="pagination__list">
+      <?php
+      /**
+         * Hook: woocommerce_after_shop_loop.
+         *
+         * @hooked woocommerce_pagination - 10
+         */
+        do_action( 'woocommerce_after_shop_loop' );
+      } else {
+        /**
+         * Hook: woocommerce_no_products_found.
+         *
+         * @hooked wc_no_products_found - 10
+         */
+        do_action( 'woocommerce_no_products_found' );
+      }
 
-<section class="offers">
-        <div class="container">
-          <h3 class="offers__title title">
-            ТОП предложений
-          </h3>
-          <div class="offers__subtitle subtitle">
-            Что выбирают наши гости в этом сезоне
-          </div>
-          <div class="offers-block">
-            <div class="offers-block__left--wrapper">
-              <div class="offers-block__left">
-                <?php
-                $product_home = new WP_Query([
-                    'post_type' => 'product',
-                    'posts_per_page' => 6
-                ])
-                ?>
-                <?php if($product_home->have_posts()) : while($product_home->have_posts()) : $product_home->the_post();?>
-                <a href="<?php the_permalink();?>" class="offers-block__item" style="background-image: url('<?php the_post_thumbnail_url();?>');">
-                  <div class="offers-block__item-text">
-                    <?php the_field('tovar_predlozhenie_tekst')?>
-                  </div>
-                  <div class="offers-block__item-title">
-                    <?php the_title();?>
-                  </div>
-                </a>
-               <?php endwhile; endif;?>
-               <?php wp_reset_postdata();?>
-              </div>
-            </div>
-           
-            <div class="offers-block__right--wrapper">
-              <div class="offers-block__right">
-                <div class="offers-block__right-title">Нужна помощь?</div>
-                <div class="offers-block__right-text">
-                  Не знаете, как выбрать? 
-                  Оставьте заявку, мы сделаем подборку предложений, с учетом всех Ваших пожеланий
-                </div>
-                <div class="offers-block__form">
-							    <?php echo do_shortcode('[contact-form-7 id="379292c" title="Нужна помощь"]')?>
-						    </div>
-                <img src="<?php echo get_template_directory_uri()?>/assets/images/home/home-man.png" alt="img" class="offers-block__right-img">
-                <div class="offers-block__right-img">
-              </div>
-            </div>
-           
-          </div>
+      ?>
+    </div>
+  </div>
+</div>
+
+  <section class="offers">
+      <div class="container">
+        <h3 class="offers__title title">
+          ТОП предложений
+        </h3>
+        <div class="offers__subtitle subtitle">
+          Что выбирают наши гости в этом сезоне
         </div>
-      
-      </section>
+        <div class="offers-block">
+          <div class="offers-block__left--wrapper">
+            <div class="offers-block__left">
+              <?php
+              $product_home = new WP_Query([
+                  'post_type' => 'product',
+                  'posts_per_page' => 6,
+                  'meta_query' => [
+                    'relation' => 'OR',
+                    [
+                      'key' => 'tovar_na_glavnoj',
+                      'value' => 'да'
+                    ],
+                    
+                  ]
+                   
+              ])
+              ?>
+              <?php if($product_home->have_posts()) : while($product_home->have_posts()) : $product_home->the_post();?>
+              <a href="<?php the_permalink();?>" class="offers-block__item" style="background-image: url('<?php the_post_thumbnail_url();?>');">
+              <?php if(!empty(get_field('tovar_predlozhenie_tekst'))) :?>
+                <div class="offers-block__item-text">
+                  <?php the_field('tovar_predlozhenie_tekst')?>
+                </div>
+              <?php endif;?> 
+                
+                <div class="offers-block__item-title">
+                  <?php the_title();?>
+                </div>
+              </a>
+              <?php endwhile; endif;?>
+              <?php wp_reset_postdata();?>
+            </div>
+          </div>
+          
+          <div class="offers-block__right--wrapper">
+            <div class="offers-block__right">
+              <div class="offers-block__right-title">Нужна помощь?</div>
+              <div class="offers-block__right-text">
+                Не знаете, как выбрать? 
+                Оставьте заявку, мы сделаем подборку предложений, с учетом всех Ваших пожеланий
+              </div>
+              <div class="offers-block__form">
+                <?php echo do_shortcode('[contact-form-7 id="379292c" title="Нужна помощь"]')?>
+              </div>
+              <img src="<?php echo get_template_directory_uri()?>/assets/images/home/home-man.png" alt="img" class="offers-block__right-img">
+              <div class="offers-block__right-img">
+            </div>
+          </div>
+          
+        </div>
+      </div>    
+  </section>
 
 	  <div class="price">
         <div class="container">

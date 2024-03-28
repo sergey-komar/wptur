@@ -57,51 +57,6 @@ add_action( 'widgets_init', 'tur_widgets_init' );
 
 
 
-// add_action('init', 'my_custom_init',0);
-// function my_custom_init(){
-// 	register_post_type('news', array(
-// 		'labels'             => array(
-// 			'name'               => __('Новости'), // Основное название типа записи
-// 			'singular_name'      => __('Новости'), // отдельное название записи типа Book
-// 			'add_new'            => __('Добавить Новости'),
-// 			'add_new_item'       => __('Добавить новые Новости'),
-// 			'edit_item'          => __('Редактировать Новости'),
-// 			'new_item'           => __('Новые Новости'),
-// 			'view_item'          => __('Посмотреть Новости'),
-// 			'search_items'       => __('Найти Новости'),
-// 			'not_found'          => __('Новости не найдено'),
-// 			'not_found_in_trash' => __('Новости не найдено'),
-// 			'parent_item_colon'  => __(''),
-// 			'menu_name'          => __('Новости')
-
-// 		  ),
-// 		'public'             => true,
-//         'has_archive'        => true,
-// 		'publicly_queryable' => true,
-// 		'show_ui'            => true,
-// 		'show_in_menu'       => true,
-// 		'query_var'          => true,
-// 		'rewrite'            => true,
-// 		'capability_type'    => 'post',
-		
-// 		'menu_icon'			 => 'dashicons-businessman',
-// 		'hierarchical'       => false,
-// 		'menu_position'      => null,
-// 		'taxonomies'          => array( 'category' ),//Добавляем категории
-// 		'supports'           => array('title','editor','thumbnail','excerpt')
-// 	) );
-// }
-
-
-
-
-
-
-
-
-
-
-
 //УБИРАЕМ span и br в contact form 7
 add_filter('wpcf7_form_elements', function($content) {
     $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
@@ -117,6 +72,8 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 
 require_once get_template_directory() . '/inc/woocommerce-hooks.php';
 require_once get_template_directory() . '/inc/breadcrumbs.php';
+require_once get_template_directory() . '/inc/text.php';
+
 
 
 function debug( $data ) {

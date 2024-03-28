@@ -27,21 +27,23 @@
             ?>
         </nav>                                        
         <div class="header-top__social">
-          <a href="#" class="header-top__social-link">
+          <a href="<?php the_field('telegram', 'options');?>" class="header-top__social-link">
             <img src="<?php echo get_template_directory_uri()?>/assets/images/header/header-tg.svg" alt="img">
           </a>
-          <a href="#" class="header-top__social-link">
+          <a href="<?php the_field('instagram', 'options');?>" class="header-top__social-link">
             <img src="<?php echo get_template_directory_uri()?>/assets/images/header/header-inst.svg" alt="img">
           </a>
         </div>
   
-        <div class="header-top__date">c 09:00 до 21:00<br> 
+        <div class="header-top__date"><?php the_field('vremya', 'options');?><br> 
           в будни</div>
   
         <div class="header-top__contact">
-          <a href="tel:" class="header-top__contact-phone">+7 789 765 43 21</a>
-          <a href="tel:+71234567899" class="header-top__contact-phone header-top__contact-phone-desctop">+7 123 456 78 99</a>
-          <button class="header-top__contact-btn btn--green">забронировать</button>
+          <a href="tel:" class="header-top__contact-phone"><?php the_field('telefon-2', 'options');?></a>
+          <a href="tel:+71234567899" class="header-top__contact-phone header-top__contact-phone-desctop">
+          <?php the_field('telefon-1', 'options');?>
+          </a>
+          <button class="header-top__contact-btn btn--green btn-click">забронировать</button>
         </div>
         <div class="nav-icon">
           <div class="nav-icon__middle"></div>

@@ -10,38 +10,36 @@ if ( ! $product_attributes ) {
 }
 ?>
 <div class="tabs__contentt">
-<div class="recommend-block__item">
-	<img src="./images/catalog/nomer-2.png" alt="img" class="recommend-block__item-img">
-	<div class="recommend-block__content">
-		<div class="recommend-block__content-title">Одноместный стандарт</div>
-		<div class="recommend-block__content__subtitle">
-		Одноместный стандартный номер. Площадь номера 12 кв. м.
-		</div>
-		<div class="recommend-block__content-text">
-		Сервис: смена полотенец: на 4-й день, смена постельного белья: на 4-й день
-		уборка номера: ежедневно, услуги внутренней телефонной связи
-		</div>
-		<div class="recommend-block__center">
-		<div class="recommend-block__icon">
-			<img src="./images/home/wifi 1.svg" alt="img" class="recommend-block__icon-img">
-			<div class="recommend-block__icon-title">Wi-Fi</div>
-		</div>
-		<div class="recommend-block__icon">
-			<img src="./images/catalog/refrigerator-f-svgrepo-com 1.svg" alt="img" class="recommend-block__icon-img">
-			<div class="recommend-block__icon-title">Холодильник</div>
-		</div>
-		<div class="recommend-block__icon">
-			<img src="./images/catalog/shower 1.svg" alt="img" class="recommend-block__icon-img">
-			<div class="recommend-block__icon-title">Душевая кабина</div>
-		</div>
-		</div>
-
-		<div class="recommend-block__bottom">
-		<div class="recommend-block__bottom-price">
-			Количество человек: 1
-		</div>
-		<a href="#" class="recommend-block__bottom-btn">забронировать</a>
+	<?php if(have_rows('kartochka_v_tabah_element')) : while(have_rows('kartochka_v_tabah_element')) : the_row();?>
+	<div class="recommend-block__item">
+		<img src="<?php the_sub_field('kartochka_v_tabah_element_kartinka');?>" alt="img" class="recommend-block__item-img">
+		<div class="recommend-block__content">
+			<div class="recommend-block__content-title">
+			<?php the_sub_field('kartochka_v_tabah_element_zagolovok');?>
+			</div>
+			<div class="recommend-block__content__subtitle">
+			<?php the_sub_field('kartochka_v_tabah_element_podzagolovok');?>
+			</div>
+			<div class="recommend-block__content-text">
+			<?php the_sub_field('kartochka_v_tabah_element_tekst');?>
+			</div>
+			<div class="recommend-block__center">
+				<?php if(have_rows('kartochka_v_tabah_uslugi')) : while(have_rows('kartochka_v_tabah_uslugi')) : the_row();?>
+				<div class="recommend-block__icon">
+					<img src="<?php the_sub_field('kartochka_v_tabah_uslugi_kartinka');?>" alt="img" class="recommend-block__icon-img">
+					<div class="recommend-block__icon-title">
+					<?php the_sub_field('kartochka_v_tabah_uslugi_nazvanie');?>
+					</div>
+				</div>
+				<?php endwhile; endif;?>
+			</div>
+			<div class="recommend-block__bottom">
+				<div class="recommend-block__bottom-price">
+				<?php the_sub_field('kartochka_v_tabah_element_kol-vo_chelovek');?>
+				</div>
+				<button  class="recommend-block__bottom-btn btn-click">забронировать</button>
+			</div>
 		</div>
 	</div>
-</div>
+	<?php endwhile; endif;?>
 </div>
